@@ -159,27 +159,13 @@
 // output.innerText = current_time;
 
 
-$(document).ready(function () {
-    let weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    let today = new Date();
 
-    let month = today.getMonth() + 1;
-    let year = today.getFullYear();
-    let date = weekday[today.getDay()];
-    let current_date = `${date} ${month} ${year}`;
 
-    let hours = addZero(today.getHours());
-    let minutes = addZero(today.getMinutes());
-    let seconds = addZero(today.getSeconds());
-    let current_time = `${hours}:${minutes}:${seconds}`;
 
-    document.getElementById("currenttime").innerText = current_time;
-    document.getElementById("todaydate").innerHTML = current_date;
-});
-
-function addZero(num){
-    return num < 10 ? `0${num}`:num;
-}
+$(function(){
+    $("#header").load("header.html"); 
+    $("#footer").load("footer.html"); 
+  });
 
 
 
