@@ -61,7 +61,7 @@ body {
   line-height: 1.5;
   color: #6c757d;
   text-align: left;
-  background-color: #f2f2f2;
+  background-color: #efeded;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -713,7 +713,7 @@ pre code {
 
 .carousel-item img{
   width: 100%;
-  height: 800px;
+  height: 600px;
   object-fit: cover;
 }
 
@@ -1853,6 +1853,10 @@ pre code {
   }
 }
 
+#navbarCollapse{
+  padding: 20px 0;
+}
+
 @media (max-width: 991.98px) {
   .table-responsive-lg {
     display: block;
@@ -1862,6 +1866,15 @@ pre code {
   }
   .table-responsive-lg > .table-bordered {
     border: 0;
+  }
+  #navbarCollapse{
+    padding: 0;
+  }
+  img.remove{
+    display: none;
+  }
+  #todaydate, #currenttime{
+    display: none;
   }
 }
 
@@ -9516,10 +9529,8 @@ h6,
   outline: none;
 }
 
-.navbar-light .navbar-nav .nav-link:hover,
-.navbar-light .navbar-nav .nav-link.active {
-  color: #ffffff;
-  background: #ED1C24;
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #ed1c24;
 }
 
 @media (max-width: 991.98px) {
