@@ -16,6 +16,8 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/weather.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -144,10 +146,10 @@
 
     <!-- Category News Slider Start -->
     <div class="container-fluid">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 py-3">
-                    <div class="bg-light py-2 px-4 mb-3">
+        <div class="container px-0">
+            <div class="row-grid">
+                <div class=" py-3">
+                    <div class="bg-light py-2 px-2 mb-3">
                         <h3 class="m-0">Tourist Place</h3>
                     </div>
                     <div class="owl-carousel owl-carousel-3  carousel-item-2 position-relative">
@@ -174,7 +176,8 @@
                                     <span class="px-1">/</span>
                                     <span>January 01, 2045</span> -->
                                 </div>
-                                <a class="h4 m-0" href="blog2.html">Hampi is a UNESCO World Heritage Site located in the Indian
+                                <a class="h4 m-0" href="blog2.html">Hampi is a UNESCO World Heritage Site located in the
+                                    Indian
                                     state of Karnataka. It is an ancient city that was once the capital of the
                                     Vijayanagara Empire, which ruled southern India from the 14th to the 16th
                                     centuries.</a>
@@ -244,9 +247,9 @@
 
     <!-- Category News Slider Start -->
     <div class="container-fluid">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 py-3">
+        <div class="container px-0">
+            <div class="row-grid">
+                <div class="py-3">
                     <div class="bg-light py-2 px-4 mb-3">
                         <h3 class="m-0">Entertainment</h3>
                     </div>
@@ -254,12 +257,10 @@
                         <div class="position-relative">
                             <img class="img-fluid w-100"
                                 src="https://images.news18.com/kannada/uploads/2022/12/1671597213_Shahrukh-Khan-2.jpg?im=Resize,width=904,aspect=fit,type=normal"
-                                style="object-fit: cover;">
+                                style="object-fit: cover; width: 100%; height: 310px;">
                             <div class="overlay position-relative bg-light">
                                 <div class="mb-2" style="font-size: 13px;">
-                                    <!-- <a href="">Technology</a>
-                                    <span class="px-1">/</span>
-                                    <span>January 01, 2045</span> -->
+                                 
                                 </div>
                                 <a class="h4 m-0" href="">ಶಾರುಖ್ ವಿವಾದ ಇದೇ ಮೊದಲಲ್ಲ! ತಮ್ಮ ಸಿಟ್ಟಿನಿಂದ ಹಲವು ಬಾರಿ ಟ್ರೋಲ್
                                     ಆಗಿದ್ದಾರೆ ನಟ</a>
@@ -288,7 +289,7 @@
                                     <span>January 01, 2045</span> -->
                                 </div>
                                 <a class="h4 m-0" href="">‘ಕೆಜಿಎಫ್’ ಚಿತ್ರಕ್ಕೆ 4 ವರ್ಷ; ಇತಿಹಾಸ ಸೃಷ್ಟಿಸಿದ ದಿನ ನೆನೆದ ಹೊಂಬಾಳೆ
-                                    ಫಿಲ್ಮ್ಸ್​</a>
+                                    ಫಿಲ್ಮ್ಸ್ <br>  ​</a>
                             </div>
                         </div>
                     </div>
@@ -342,7 +343,7 @@
 
     <!-- News With Sidebar Start -->
     <div class="container-fluid py-3">
-        <div class="container">
+        <div class="container px-0">
             <div class="row">
                 <div class="col-lg-8">
                     <div class="row mb-3">
@@ -436,9 +437,9 @@
                         </div>
                     </div>
 
-                    <div class="mb-3 pb-3">
+                    <!-- <div class="mb-3 pb-3">
                         <a href=""><img class="img-fluid1 w-100" src="img/ads-700x70.jpg" alt=""></a>
-                    </div>
+                    </div> -->
 
                     <div class="row">
                         <div class="col-12">
@@ -533,12 +534,79 @@
                 </div>
 
                 <div class="col-lg-4 pt-3 pt-lg-0">
+                    
+                    <!-- Newsletter Start -->
+                    <div class="pb-3">
+                        <div class="wrapper">
+                            <header><i class='bx bx-left-arrow-alt'></i>Weather App</header>
+                            <section class="input-part">
+                              <p class="info-txt"></p>
+                              <div class="content">
+                                <input type="text" spellcheck="false" placeholder="Enter city name" required>
+                                <div class="separator"></div>
+                                <button>Get Device Location</button>
+                              </div>
+                            </section>
+                            <section class="weather-part">
+                              <img src="" alt="Weather Icon">
+                              <div class="temp">
+                                <span class="numb">_</span>
+                                <span class="deg">°</span>C
+                              </div>
+                              <div class="weather">_ _</div>
+                              <div class="location">
+                                <i class='bx bx-map'></i>
+                                <span>_, _</span>
+                              </div>
+                              <div class="bottom-details">
+                                <div class="column feels">
+                                  <i class='bx bxs-thermometer'></i>
+                                  <div class="details">
+                                    <div class="temp">
+                                      <span class="numb-2">_</span>
+                                      <span class="deg">°</span>C
+                                    </div>
+                                    <p>Feels like</p>
+                                  </div>
+                                </div>
+                                <div class="column humidity">
+                                  <i class='bx bxs-droplet-half'></i>
+                                  <div class="details">
+                                    <span>_</span>
+                                    <p>Humidity</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </section>
+                          </div>
+                    </div>
+                    <!-- Newsletter End -->
+
                     <!-- Social Follow Start -->
                     <div class="pb-3">
                         <div class="bg-light py-2 px-4 mb-3">
                             <h3 class="m-0">Follow Us</h3>
                         </div>
-                        <div class="d-flex mb-3">
+
+                        <div class="follow mb-3">
+                            <a href="" class="text-white text-decoration-none"
+                                style="background: #39569E; border-radius: 50%;">
+                                <small class="fab fa-facebook-f"></small>
+                            </a>
+                            <a href="" class="text-white text-decoration-none"
+                                style="background: #52AAF4; border-radius: 50%;">
+                                <small class="fab fa-twitter"></small>
+                            </a>
+                            <a href="" class="text-white text-decoration-none"
+                                style="background: #DC472E; border-radius: 50%;">
+                                <small class="fab fa-youtube "></small>
+                            </a>
+                            <a href="" class="text-white text-decoration-none"
+                                style="background: #C8359D; border-radius: 50%;">
+                                <small class="fab fa-instagram"></small>
+                            </a>
+                        </div>
+                        <!-- <div class="d-flex mb-3">
                             <a href="" class="d-block w-50 py-2 px-3 text-white text-decoration-none mr-2"
                                 style="background: #39569E;">
                                 <small class="fab fa-facebook-f mr-2"></small><small>12,345 Fans</small>
@@ -547,52 +615,22 @@
                                 style="background: #52AAF4;">
                                 <small class="fab fa-twitter mr-2"></small><small>12,345 Followers</small>
                             </a>
-                        </div>
+                        </div> -->
+                        
                         <div class="d-flex mb-3">
-                            <a href="" class="d-block w-50 py-2 px-3 text-white text-decoration-none mr-2"
-                                style="background: #0185AE;">
-                                <small class="fab fa-linkedin-in mr-2"></small><small>12,345 Connects</small>
-                            </a>
-                            <a href="" class="d-block w-50 py-2 px-3 text-white text-decoration-none ml-2"
-                                style="background: #C8359D;">
-                                <small class="fab fa-instagram mr-2"></small><small>12,345 Followers</small>
-                            </a>
-                        </div>
-                        <div class="d-flex mb-3">
-                            <a href="" class="d-block w-50 py-2 px-3 text-white text-decoration-none mr-2"
-                                style="background: #DC472E;">
-                                <small class="fab fa-youtube mr-2"></small><small>12,345 Subscribers</small>
-                            </a>
-                            <a href="" class="d-block w-50 py-2 px-3 text-white text-decoration-none ml-2"
+                            
+                            <!-- <a href="" class="d-block w-50 py-2 px-3 text-white text-decoration-none ml-2"
                                 style="background: #1AB7EA;">
                                 <small class="fab fa-vimeo-v mr-2"></small><small>12,345 Followers</small>
-                            </a>
+                            </a> -->
                         </div>
                     </div>
                     <!-- Social Follow End -->
 
-                    <!-- Newsletter Start -->
-                    <div class="pb-3">
-                        <div class="bg-light py-2 px-4 mb-3">
-                            <h3 class="m-0">Newsletter</h3>
-                        </div>
-                        <div class="bg-light text-center p-4 mb-3">
-                            <p>Aliqu justo et labore at eirmod justo sea erat diam dolor diam vero kasd</p>
-                            <div class="input-group" style="width: 100%;">
-                                <input type="text" class="form-control form-control-lg" placeholder="Your Email">
-                                <div class="input-group-append">
-                                    <button class="btn btn-primary">Sign Up</button>
-                                </div>
-                            </div>
-                            <small>Sit eirmod nonumy kasd eirmod</small>
-                        </div>
-                    </div>
-                    <!-- Newsletter End -->
-
                     <!-- Ads Start -->
-                    <div class="mb-3 pb-3">
+                    <!-- <div class="mb-3 pb-3">
                         <a href=""><img class="img-fluid2" src="img/news-500x280-4.jpg" alt=""></a>
-                    </div>
+                    </div> -->
                     <!-- Ads End -->
 
 
@@ -626,13 +664,13 @@
     <!-- News With Sidebar End -->
 
 
-   <div id="footer">
+    <div id="footer">
 
-   </div>
+    </div>
 
 
-   
 
+    <script type='text/javascript' src='//pl18900842.highrevenuegate.com/66/15/f8/6615f8803988730df577fd28ef69d6c0.js'></script>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
