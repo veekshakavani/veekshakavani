@@ -154,11 +154,11 @@ h1 {
 }
 
 .month#april .name:before {
-  background-image: url(../signs/Aries.png);
+  background-image: url(../signs/aries.png);
 }
 
 .month#april .divider {
-  background-image: url(../signs/Aries.png);
+  background-image: url(../signs/aries.png);
 }
 
 .month#may .name:before {
