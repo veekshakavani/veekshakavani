@@ -1,198 +1,323 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-}
-/* body{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background: #43AFFC;
-} */
-::selection{
-  color: #fff;
-  background: #43AFFC;
-}
-.wrapper{
-  width: 100%;
-  background: #fff;
-  border-radius: 7px;
-  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
-  padding-bottom: 1px;
-}
-.wrapper header{
-  display: flex;
-  font-size: 22px;
-  font-weight: 700;
-  color: #000;
-  padding: 16px 15px;
-  align-items: center;
-  border-bottom: 1px solid #ccc;
-}
-header i{
-  font-size: 0em;
-  cursor: pointer;
-  margin-right: 8px;
-}
-.wrapper.active header i{
-  margin-left: 5px;
-  font-size: 30px;
-}
-.wrapper .input-part{
-  margin: 20px 25px 15px;
-}
-.wrapper.active .input-part{
-  display: none;
-}
-.input-part .info-txt{
-  display: none;
-  font-size: 17px;
-  text-align: center;
-  padding: 12px 10px;
-  border-radius: 7px;
-  margin-bottom: 15px;
-}
-.input-part .info-txt.error{
-  color: #721c24;
-  display: block;
-  background: #f8d7da;
-  border: 1px solid #f5c6cb;
-}
-.input-part .info-txt.pending{
-  color: #0c5460;
-  display: block;
-  background: #d1ecf1;
-  border: 1px solid #bee5eb;
-}
-.input-part :where(input, button){
-  width: 100%;
-  height: 55px;
-  border: none;
-  outline: none;
-  font-size: 16px;
-  border-radius: 7px;
-}
-.input-part input{
-  text-align: center;
-  padding: 0 15px;
-  border: 1px solid #ccc;
-}
-.input-part input:is(:focus, :valid){
-  border: 2px solid #43AFFC;
-}
-.input-part input::placeholder{
-  color: #bfbfbf;
-}
-.input-part .separator{
-  height: 1px;
-  width: 100%;
-  margin: 25px 0;
-  background: #ccc;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.separator::before{
-  content: "or";
-  color: #b3b3b3;
-  font-size: 19px;
-  padding: 0 15px;
-  background: #fff;
-}
-.input-part button{
-  color: #fff;
-  cursor: pointer;
-  background: #43AFFC;
-  transition: 0.3s ease;
-  margin-bottom: 15px;
-}
-.input-part button:hover{
-  background: #1d9ffc;
+
+html {
+  font-size: 100%;
+  font-variant-ligatures: none;
+  text-rendering: optimizeLegibility;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
 }
 
-.wrapper .weather-part{
-  display: none;
-  margin: 30px 0 0;
-  align-items: center;
-  justify-content: center;
+body {
+  font-family: "Butler";
+}
+
+.background {
+  background: linear-gradient(to bottom right, white, #e5e5e5);
+  display: flex;
   flex-direction: column;
-}
-.wrapper.active .weather-part{
-  display: flex;
-}
-.weather-part img{
-  max-width: 80px;
-}
-.weather-part .temp{
-  display: flex;
-  font-weight: 500;
-  font-size: 50px;
-}
-.weather-part .temp .numb{
-  font-weight: 600;
-}
-.weather-part .temp .deg{
-  font-size: 40px;
-  display: block;
-  margin: 10px 5px 0 0;
-}
-.weather-part .weather{
-  font-size: 21px;
-  text-align: center;
-  margin: -5px 20px 15px;
-}
-.weather-part .location{
-  display: flex;
-  font-size: 19px;
-  padding: 0 20px;
-  text-align: center;
-  margin-bottom: 30px;
-  align-items: flex-start;
-}
-.location i{
-  font-size: 22px;
-  margin: 4px 5px 0 0;
-}
-.weather-part .bottom-details{
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  border-top: 1px solid #ccc;
-}
-.bottom-details .column{
-  display: flex;
-  width: 100%;
-  padding: 15px 0;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
-.column i{
-  color: #5DBBFF;
-  font-size: 40px;
+
+#intro {
+  font-family: "Inconsolata";
+  color: #737373;
+  margin-bottom: 2rem;
+  max-width: 71.1vmin;
+  line-height: 1.5;
 }
-.column.humidity{
-  border-left: 1px solid #ccc;
+
+#wrapper {
+  width: 71.1vmin;
+  height: 71.1vmin;
+  position: relative;
+  background-image: linear-gradient(-225deg, #ffe8cc 0%, #ffc1ca 100%), url(https://img.freepik.com/free-vector/gradient-numerology-background_23-2150001903.jpg?w=1380&t=st=1680860725~exp=1680861325~hmac=b11cede8825640327cbd08538733f7770eed91df3490eecf32dd418d24ee3f11);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: screen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
 }
-.column .details{
-  margin-left: 3px;
+
+#wrapper h1 {
+  transition: all 0.2s ease-in;
+  opacity: 0.1;
 }
-.details .temp, .humidity span{
-  font-size: 18px;
-  font-weight: 500;
-  margin-top: -3px;
+
+#wrapper.active h1 {
+  opacity: 1;
 }
-.details .temp .deg{
-  margin: 0;
-  font-size: 17px;
-  padding: 0 2px 0 1px;
+
+h1 {
+  font-size: 14vmin;
+  font-family: "Butler";
+  color: #fff;
 }
-.column .details p{
-  font-size: 14px;
-  margin-top: -6px;
+
+#astrology {
+  z-index: 1;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1147877/resolutions-ticks.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 62vmin;
+  width: 62vmin;
+  top: 50%;
+  margin-top: -31vmin;
+  position: absolute;
 }
-.humidity i{
-  font-size: 37px;
+
+.month {
+  text-align: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform-origin: 50% 50%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  width: 0;
+  margin: 0 auto;
+  transition: all 0.2s ease-in;
 }
+
+.month:nth-child(2) {
+  transform: rotate(30deg);
+}
+
+.month:nth-child(3) {
+  transform: rotate(60deg);
+}
+
+.month:nth-child(4) {
+  transform: rotate(90deg);
+}
+
+.month:nth-child(5) {
+  transform: rotate(120deg);
+}
+
+.month:nth-child(6) {
+  transform: rotate(150deg);
+}
+
+.month:nth-child(7) {
+  transform: rotate(180deg);
+}
+
+.month:nth-child(8) {
+  transform: rotate(210deg);
+}
+
+.month:nth-child(9) {
+  transform: rotate(240deg);
+}
+
+.month:nth-child(10) {
+  transform: rotate(270deg);
+}
+
+.month:nth-child(11) {
+  transform: rotate(300deg);
+}
+
+.month:nth-child(12) {
+  transform: rotate(330deg);
+}
+
+.month#january .name:before {
+  background-image: url(../signs/capricon.png);
+}
+
+.month#january .divider {
+  background-image: url(../signs/capricon.png);
+}
+
+.month#february .name:before {
+  background-image: url(../signs/aquarius.png);
+}
+
+.month#february .divider {
+  background-image: url(../signs/aquarius.png);
+}
+
+.month#march .name:before {
+  background-image: url(../signs/pisces.png);
+}
+
+.month#march .divider {
+  background-image: url(../signs/pisces.png);
+}
+
+.month#april .name:before {
+  background-image: url(../signs/Aries.png);
+}
+
+.month#april .divider {
+  background-image: url(../signs/Aries.png);
+}
+
+.month#may .name:before {
+  background-image: url(../signs/taurus.png);
+}
+
+.month#may .divider {
+  background-image: url(../signs/taurus.png);
+}
+
+.month#june .name:before {
+  background-image: url(../signs/gemini.png);
+}
+
+.month#june .divider {
+  background-image: url(../signs/gemini.png);
+}
+
+.month#july .name:before {
+  background-image: url(../signs/cancer.png);
+}
+
+.month#july .divider {
+  background-image: url(../signs/cancer.png);
+}
+
+.month#august .name:before {
+  background-image: url(../signs/leo.png);
+}
+
+.month#august .divider {
+  background-image: url(../signs/leo.png);
+}
+
+.month#september .name:before {
+  background-image: url(../signs/virgo.png);
+}
+
+.month#september .divider {
+  background-image: url(../signs/virgo.png);
+}
+
+.month#october .name:before {
+  background-image: url(../signs/libra.png);
+}
+
+.month#october .divider {
+  background-image: url(../signs/libra.png);
+}
+
+.month#november .name:before {
+  background-image: url(../signs/scorpio.png);
+}
+
+.month#november .divider {
+  background-image: url(../signs/scorpio.png);
+}
+
+.month#december .name:before {
+  background-image: url(../signs/sagittarius.png);
+}
+
+.month#december .divider {
+  background-image: url(../signs/sagittarius.png);
+}
+
+.month.active {
+  z-index: 10;
+}
+
+.month.active .name {
+  color: #fb8d9e;
+  text-transform: capitalize;
+  transform: translateY(-0.6vmin);
+}
+
+.month.active .name:before {
+  transform: translateY(-50%) scale(0.2);
+  opacity: 0;
+}
+
+.month.active .skill {
+  opacity: 1;
+}
+
+.month .name {
+  transition: all 0.2s ease;
+  transform: translateY(0);
+  font-size: 3vmin;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: -10vmin;
+  right: -10vmin;
+  transition: all 0.2s ease;
+  color: rgba(251, 141, 158, 0);
+}
+
+.month .name:before {
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.2s ease;
+  position: absolute;
+  top: 0;
+  transition: all 0.2s ease;
+  transform: translateY(-50%) scale(1);
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 5.8vmin;
+  height: 5vmin;
+  display: block;
+}
+
+.month .skill {
+  transition: all 0.2s ease-in;
+  position: absolute;
+  left: -999px;
+  right: -999px;
+  width: 47vmin;
+  opacity: 0;
+  margin: 0 auto;
+}
+
+.month .title {
+  font-size: 3vmin;
+  font-weight: bold;
+  color: #fb8d9e;
+}
+
+.divider {
+  /* grid-template-columns: 1fr 7.5vmin 1fr; */
+  display: grid;
+  align-items: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100px;
+  background-position: center;
+  margin: 2.2vmin;
+}
+
+.divider:before, .divider:after {
+  content: "";
+  height: 0.3vmin;
+  display: block;
+  background: #bca774;
+}
+
+.divider:after {
+  grid-column: 3;
+}
+
+.description {
+  color: white;
+  font-size: 2.2vmin;
+  line-height: 3.2vmin;
+} /*# sourceMappingURL=weather.css.map */
