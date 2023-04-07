@@ -168,6 +168,45 @@ $(function(){
   });
 
 
+//   weather App
 
+const app = document.getElementById("astrology");
+const intro = document.getElementById("intro");
+const names = document.querySelectorAll(".name");
+const wrapper = document.getElementById("wrapper");
+const months = document.querySelectorAll(".month");
 
+let currentRotation = 0;
 
+names.forEach(name => {
+  name.addEventListener("click", function() {
+    const parentOfThis = this.parentNode;
+    if (parentOfThis.classList.contains("active")) {
+      parentOfThis.classList.remove("active");
+      wrapper.classList.add("active");
+      return;
+    }
+    const indexOfThis = [].slice.call(months).indexOf(parentOfThis);
+    months.forEach(month => {
+      month.classList.remove("active");
+    });
+    wrapper.classList.remove("active");
+    anime({
+      targets: "#astrology",
+      delay: 200,
+      rotate: indexOfThis * -30,
+      easing: "easeInQuad",
+      duration: 200,
+      complete: () => {
+          parentOfThis.classList.add("active");
+      }
+    });
+  });
+});
+
+intro.addEventListener('click', () => {
+  months.forEach((month) => {
+      month.classList.remove("active");
+    });
+      wrapper.classList.add("active");
+});
