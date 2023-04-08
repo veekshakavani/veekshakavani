@@ -1,5 +1,6 @@
 <?php
-  $name = htmlspecialchars($_POST['name']);
+  $fname = htmlspecialchars($_POST['fname']);
+  $lname = htmlspecialchars($_POST['lname']);
 
   $email = htmlspecialchars($_POST['email']);
   $phone = htmlspecialchars($_POST['phone']);
@@ -9,7 +10,7 @@
     if(filter_var($email, FILTER_VALIDATE_EMAIL)){
       $receiver = "rakshithjodukallu@gmail.com"; //enter that email address where you want to receive all messages
       $subject = "From: $name <$email>";
-      $body = "Name: $name\nEmail: $email\nPhone: $phone\n\nMessage:\n$message\n\nRegards,\n$name";
+      $body = "First Name: $fname\nLast Name: $lname\nEmail: $email\nPhone: $phone\n\nMessage:\n$message\n\nRegards,\n$fname $lname";
       $sender = "From: $email";
       if(mail($receiver, $subject, $body, $sender)){
          echo "Your message has been sent";
