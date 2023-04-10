@@ -5,7 +5,7 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-:root {
+ :root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -432,16 +432,10 @@ h3,
 
 h4,
 .h4 {
-  font-size: 14px;
+  font-size: 16px;
 }
 
-@media (max-width: 1200px) {
 
-  h4,
-  .h4 {
-    font-size: calc(1.275rem + 0.3vw);
-  }
-}
 
 h5,
 .h5 {
@@ -2177,7 +2171,7 @@ pre code {
 }
 
 #navbarCollapse {
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 @media (max-width: 991.98px) {
@@ -10901,3 +10895,5 @@ h6,
   padding: 0;
   list-style-type: none;
 }
+
+

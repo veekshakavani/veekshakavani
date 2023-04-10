@@ -31,7 +31,7 @@ body {
   width: 71.1vmin;
   height: 71.1vmin;
   position: relative;
-  background-image: linear-gradient(-225deg, #ffe8cc 0%, #ffc1ca 100%), url(https://img.freepik.com/free-vector/gradient-numerology-background_23-2150001903.jpg?w=1380&t=st=1680860725~exp=1680861325~hmac=b11cede8825640327cbd08538733f7770eed91df3490eecf32dd418d24ee3f11);
+  background-image: url(../img/banner/8306168.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: screen;

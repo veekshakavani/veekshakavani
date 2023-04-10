@@ -66,7 +66,7 @@
     $(".carousel-item-2").owlCarousel({
         autoplay: true,
         smartSpeed: 1000,
-        margin: 30,
+        margin: 15,
         dots: false,
         loop: true,
         nav: true,

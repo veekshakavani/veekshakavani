@@ -1,0 +1,73 @@
+@media only screen and (max-width: 768px) {
+    .logoimage {
+        width: 150px;
+        height: auto;
+    }
+    .navbar-toggler {
+        padding: 0.25rem 0.25rem;
+        font-size: 1.0rem;
+    }
+    .navbar-toggler-icon{
+        width: 1.2em;
+        height: 1.2em;
+    }
+    .carousel-item img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+    .carousel-control-next-icon, .carousel-control-prev-icon {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+    }
+
+    .carousel-indicators li{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    }
+    .overlay {
+        padding: 15px;
+    }
+    h4, .h4 {
+        font-size: 14px;
+    }
+    .background{
+        min-height: 77vh;
+        padding: 15px;
+    }
+    .divider {
+        height: 80px;
+    }
+    .follow a {
+        width: 30px;
+        height: 30px;
+       
+        font-size: 18px;
+        opacity: 0.8;
+        transition: all 0.5s ease-in;
+    }
+  }
+
+  @media only screen and (max-width: 425px) {
+    .logoimage {
+        width: 100px;
+        height: auto;
+    }
+    .carousel-item img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    .background {
+        min-height: 60vh;
+        padding: 15px;
+    }
+    .divider {
+        height: 50px;
+    }
+  }
